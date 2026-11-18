@@ -134,6 +134,13 @@ article video { width: 100%; background: var(--highlight); }
 hr { display: none; }
 section.footnotes { border-top: 1px solid var(--lightgray); margin-top: var(--space-8); padding-top: var(--space-4); }
 section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
+.category-index { margin-top: var(--space-8); }
+.category-group { margin: 0 0 var(--space-6); }
+.category-group h3 { margin: 0 0 var(--space-3); }
+.category-group h3 a { color: var(--secondary); }
+.category-count { font-family: var(--codeFont); font-size: 13px; color: var(--gray); margin-left: var(--space-2); }
+.category-group ul { list-style: none; padding: 0; margin: 0; }
+.category-group li { margin: 0 0 var(--space-2); }
 .backlinks { margin-top: var(--space-8); }
 .page > #quartz-body .page-footer { margin-top: var(--space-8); }
 @media (prefers-reduced-motion: reduce) {

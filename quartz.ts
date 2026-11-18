@@ -1,19 +1,26 @@
 import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
 import { registerCondition } from "./quartz/plugins/loader/conditions"
 import { BlogLink } from "./quartz/components/BlogLink"
+import { CategoryList } from "./quartz/components/CategoryList"
 
 registerCondition("index", ({ fileData }) => fileData.slug === "index")
 
 const config = await loadQuartzConfig()
 export default config
 
-// Read the plugin-built header once so the blog link can sit next to the title.
-const header = [...((await loadQuartzLayout()).defaults.header ?? [])]
+// Read the plugin-built layout once so we can insert the blog link and category index.
+const baseLayout = await loadQuartzLayout()
+const header = [...(baseLayout.defaults.header ?? [])]
 header.splice(1, 0, BlogLink)
 
 export const layout = await loadQuartzLayout({
   // Match Doxa: no sidebars; the header and content span the full width.
-  defaults: { header, left: [], right: [] },
+  defaults: {
+    header,
+    afterBody: [CategoryList, ...(baseLayout.defaults.afterBody ?? [])],
+    left: [],
+    right: [],
+  },
   byPageType: {
     content: { frame: "full-width" },
     folder: { frame: "full-width" },
