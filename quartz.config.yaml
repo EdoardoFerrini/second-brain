@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Second Brain
+  pageTitle: Episteme
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -157,10 +157,11 @@ plugins:
       groupOptions:
         grow: true
   - source: "@quartz-community/backlinks"
-    enabled: false
+    enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 20
+      condition: has-backlinks
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
