@@ -11,7 +11,7 @@ order: 1
 
 - Aggiungi file Markdown (`.md`) nella cartella `content/`.
 - Puoi organizzarli in cartelle: diventeranno automaticamente pagine cartella navigabili.
-- I metadati in cima al file (frontmatter) possono contenere `title`, `description`, `tags` e `aliases`.
+- I metadati in cima al file (frontmatter) possono contenere `title`, `description` e `aliases`.
 
 ## Collegare
 

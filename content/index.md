@@ -9,7 +9,7 @@ Questo è il tuo spazio per raccogliere, collegare e ritrovare idee, appunti e c
 ## Da dove iniziare
 
 - [[Come usare questo second brain]] — guida rapida all'uso del sito.
-- [[Nota di esempio]] — esempio di nota con tag, wikilink e backlink.
+- [[Nota di esempio]] — esempio di nota con wikilink e backlink.
 - [[Javascript - understanding the weird Parts]] — corso con tutti i capitoli.
 - [[Execution Context]], [[Hoisting]], [[Closures]] — capitoli del corso.
 - Usa la **ricerca** nella barra degli strumenti per trovare qualsiasi contenuto.
