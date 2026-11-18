@@ -134,9 +134,8 @@ article video { width: 100%; background: var(--highlight); }
 hr { display: none; }
 section.footnotes { border-top: 1px solid var(--lightgray); margin-top: var(--space-8); padding-top: var(--space-4); }
 section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
-/* The homepage only shows the generated category index; keep the source links
-   so notes still receive backlinks. */
-article:has(+ hr + .page-footer .category-index) { display: none; }
+/* Keep wikilinks in the source so notes get backlinks, without showing them. */
+.callout[data-callout="hidden"] { display: none; }
 .course-chapters { margin-top: var(--space-8); }
 .course-chapters ol { margin: 0; padding-left: var(--space-6); }
 .course-chapters li { margin: 0 0 var(--space-2); }
