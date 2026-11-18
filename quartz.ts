@@ -2,6 +2,7 @@ import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/conf
 import { registerCondition } from "./quartz/plugins/loader/conditions"
 import { BlogLink } from "./quartz/components/BlogLink"
 import { CategoryList } from "./quartz/components/CategoryList"
+import { CourseChapters } from "./quartz/components/CourseChapters"
 
 registerCondition("index", ({ fileData }) => fileData.slug === "index")
 
@@ -17,7 +18,7 @@ export const layout = await loadQuartzLayout({
   // Match Doxa: no sidebars; the header and content span the full width.
   defaults: {
     header,
-    afterBody: [CategoryList, ...(baseLayout.defaults.afterBody ?? [])],
+    afterBody: [CategoryList, CourseChapters, ...(baseLayout.defaults.afterBody ?? [])],
     left: [],
     right: [],
   },
