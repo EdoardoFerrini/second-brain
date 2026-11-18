@@ -17,7 +17,6 @@ export const RecentNotes: QuartzComponent = ({ fileData, allFiles }: QuartzCompo
         !!f.slug &&
         f.slug !== "index" &&
         !("unlisted" in f && f.unlisted === true) &&
-        f.frontmatter?.kind !== "course" &&
         !!date
       )
     })

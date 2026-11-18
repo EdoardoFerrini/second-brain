@@ -83,6 +83,8 @@ p { margin: var(--space-4) 0; }
 }
 h2 { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-weight: 450; margin: var(--space-8) 0 var(--space-4); }
 h3, h4, h5, h6 { font-family: var(--bodyFont); font-size: 16px; line-height: 24px; font-weight: 600; margin: var(--space-6) 0 var(--space-3); }
+/* Il plugin attiva .collapsed ma non include la regola che nasconde l'elenco. */
+.toc-content.collapsed { display: none; }
 .date-line { display: block; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); margin-bottom: var(--space-6); }
 .post-list { list-style: none; padding: 0; margin: var(--space-8) 0 0; }
 .post-list li { display: flex; gap: var(--space-4); align-items: baseline; margin: 0 0 var(--space-3); }
@@ -136,21 +138,11 @@ section.footnotes { border-top: 1px solid var(--lightgray); margin-top: var(--sp
 section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
 /* Keep wikilinks in the source so notes get backlinks, without showing them. */
 .callout[data-callout="hidden"] { display: none; }
-.course-chapters { margin-top: var(--space-8); }
-.course-chapters ol { margin: 0; padding-left: var(--space-6); }
-.course-chapters li { margin: 0 0 var(--space-2); }
 .recent-notes { margin-top: var(--space-8); }
 .recent-notes h3 { margin: 0 0 var(--space-3); }
 .recent-note-list { list-style: none; padding: 0; margin: 0; }
 .recent-note-list li { display: flex; gap: var(--space-4); align-items: baseline; margin: 0 0 var(--space-3); }
 .recent-note-list time { flex: none; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); }
-.category-index { margin-top: var(--space-8); }
-.category-group { margin: 0 0 var(--space-6); }
-.category-group h3 { margin: 0 0 var(--space-3); }
-.category-group h3 a { color: var(--secondary); }
-.category-count { font-family: var(--codeFont); font-size: 13px; color: var(--gray); margin-left: var(--space-2); }
-.category-group ul { list-style: none; padding: 0; margin: 0; }
-.category-group li { margin: 0 0 var(--space-2); }
 .backlinks { margin-top: var(--space-8); }
 .page > #quartz-body .page-footer { margin-top: var(--space-8); }
 @media (prefers-reduced-motion: reduce) {
