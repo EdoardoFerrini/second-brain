@@ -3,9 +3,6 @@ title: Come usare questo second brain
 description: Guida rapida per scrivere e organizzare le note.
 category: Guida
 order: 1
-tags:
-  - guida
-  - metodo
 ---
 
 # Come usare questo second brain

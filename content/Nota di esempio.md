@@ -3,9 +3,6 @@ title: Nota di esempio
 description: Una nota di esempio per vedere all'opera le funzionalità di Quartz.
 category: Esempio
 order: 1
-tags:
-  - esempio
-  - idea
 aliases:
   - Esempio
 ---

@@ -1,7 +1,5 @@
 ---
 description: La mia libreria di conoscenze personale, costruita con Quartz 5.
-tags:
-  - indice
 ---
 
 # Benvenuto nel tuo Second Brain
