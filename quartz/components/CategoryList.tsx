@@ -4,7 +4,7 @@ import { resolveRelative } from "../util/path"
 
 // Notes stay flat in content/. Their `category` frontmatter drives the grouping,
 // and this list fixes the order in which categories appear.
-const CATEGORY_ORDER = ["Corsi", "Guida", "Esempio"]
+const CATEGORY_ORDER = ["Corsi"]
 
 const titleOf = (f: QuartzPluginData) => f.frontmatter?.title ?? f.slug ?? "Senza titolo"
 const orderOf = (f: QuartzPluginData) => {
@@ -28,9 +28,9 @@ export const CategoryList: QuartzComponent = ({ fileData, allFiles }: QuartzComp
     groups.get(category)!.push(f)
   }
 
-  const categories = [...groups.keys()].sort(
-    (a, b) => categoryRank(a) - categoryRank(b) || a.localeCompare(b, "it"),
-  )
+  const categories = [...groups.keys()]
+    .filter((category) => CATEGORY_ORDER.includes(category))
+    .sort((a, b) => categoryRank(a) - categoryRank(b) || a.localeCompare(b, "it"))
 
   return <div class="category-index">
     {categories.map((category) => (

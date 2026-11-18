@@ -1,5 +1,4 @@
 ---
-title: Second Brain
 description: La mia libreria di conoscenze personale, costruita con Quartz 5.
 tags:
   - indice
@@ -14,11 +13,9 @@ Questo è il tuo spazio per raccogliere, collegare e ritrovare idee, appunti e c
 - [[Come usare questo second brain]] — guida rapida all'uso del sito.
 - [[Nota di esempio]] — esempio di nota con tag, wikilink e backlink.
 - [[Javascript - understanding the weird Parts]] — corso con tutti i capitoli.
+- [[Execution Context]], [[Hoisting]], [[Closures]] — capitoli del corso.
 - Usa la **ricerca** nella barra degli strumenti per trovare qualsiasi contenuto.
-- Esplora la **mappa dei collegamenti** (graph view) per scoprire connessioni tra le note.
 
 ## Scrivere una nuova nota
 
-Crea un file `.md` dentro `content/` (anche in sottocartelle). Per collegare due note, usa un wikilink come `[[Nome della nota]]`: Quartz creerà automaticamente il link e i backlink.
-
-Per il supporto completo alla sintassi Obsidian (callout, wikilink, Mermaid), la configurazione include già il plugin Obsidian Flavored Markdown.
+Crea un file `.md` dentro `content/`. Per collegare due note, usa un wikilink come `[[Nome della nota]]`: Quartz creerà automaticamente il link e i backlink.
