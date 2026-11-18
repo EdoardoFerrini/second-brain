@@ -163,7 +163,7 @@ plugins:
       priority: 20
       condition: has-backlinks
   - source: "@quartz-community/article-title"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 10
