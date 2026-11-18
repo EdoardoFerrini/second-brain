@@ -2,68 +2,45 @@ import { QuartzComponent, QuartzComponentProps } from "./types"
 import { QuartzPluginData } from "../plugins/vfile"
 import { resolveRelative } from "../util/path"
 
-type Category = {
-  slug: string
-  title: string
-  order: number
-  notes: QuartzPluginData[]
-}
+// Notes stay flat in content/. Their `category` frontmatter drives the grouping,
+// and this list fixes the order in which categories appear.
+const CATEGORY_ORDER = ["Guida", "Esempio"]
 
 const titleOf = (f: QuartzPluginData) => f.frontmatter?.title ?? f.slug ?? "Senza titolo"
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+const orderOf = (f: QuartzPluginData) => {
+  const order = f.frontmatter?.order
+  return typeof order === "number" ? order : Number.POSITIVE_INFINITY
+}
+const categoryRank = (category: string) => {
+  const index = CATEGORY_ORDER.indexOf(category)
+  return index === -1 ? Number.POSITIVE_INFINITY : index
+}
 
 export const CategoryList: QuartzComponent = ({ fileData, allFiles }: QuartzComponentProps) => {
   if (fileData.slug !== "index") return null
 
-  const categories = new Map<string, Category>()
-  const categoryPages = new Map<string, QuartzPluginData>()
-
+  const groups = new Map<string, QuartzPluginData[]>()
   for (const f of allFiles) {
-    if (!f.slug || f.slug.startsWith("tags/") || f.slug === "index") continue
-    const parts = f.slug.split("/").filter(Boolean)
-    if (parts.length === 0) continue
-
-    // A category's index.md is emitted as "guida/index".
-    if (parts.length === 2 && parts[1] === "index") {
-      categoryPages.set(parts[0], f)
-      continue
-    }
-    if (parts.length === 1) continue
-
-    const key = parts[0]
-    if (!categories.has(key)) {
-      categories.set(key, {
-        slug: key,
-        title: capitalize(key),
-        order: Number.POSITIVE_INFINITY,
-        notes: [],
-      })
-    }
-    categories.get(key)!.notes.push(f)
+    const category = f.frontmatter?.category
+    if (!f.slug || f.slug === "index" || typeof category !== "string" || !category.trim()) continue
+    if (!groups.has(category)) groups.set(category, [])
+    groups.get(category)!.push(f)
   }
 
-  for (const [key, page] of categoryPages) {
-    const category = categories.get(key)
-    if (!category) continue
-    const order = page.frontmatter?.order
-    category.title = titleOf(page)
-    category.order = typeof order === "number" ? order : Number.POSITIVE_INFINITY
-  }
-
-  const sorted = [...categories.values()].sort(
-    (a, b) => a.order - b.order || a.title.localeCompare(b.title, "it"),
+  const categories = [...groups.keys()].sort(
+    (a, b) => categoryRank(a) - categoryRank(b) || a.localeCompare(b, "it"),
   )
 
   return <div class="category-index">
-    {sorted.map((category) => (
+    {categories.map((category) => (
       <section class="category-group">
         <h3>
-          <a href={resolveRelative(fileData.slug!, category.slug)}>{category.title}</a>
-          <span class="category-count">{category.notes.length}</span>
+          {category}
+          <span class="category-count">{groups.get(category)!.length}</span>
         </h3>
         <ul>
-          {category.notes
-            .sort((a, b) => titleOf(a).localeCompare(titleOf(b), "it"))
+          {groups.get(category)!
+            .sort((a, b) => orderOf(a) - orderOf(b) || titleOf(a).localeCompare(titleOf(b), "it"))
             .map((note) => (
               <li>
                 <a class="internal" href={resolveRelative(fileData.slug!, note.slug!)}>{titleOf(note)}</a>
