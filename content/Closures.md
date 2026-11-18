@@ -6,4 +6,6 @@ chapter: 3
 
 # Closures
 
+## Appunti
+
 Appunti da completare.

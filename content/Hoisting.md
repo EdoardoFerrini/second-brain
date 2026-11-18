@@ -6,4 +6,6 @@ chapter: 2
 
 # Hoisting
 
+## Appunti
+
 Appunti da completare.

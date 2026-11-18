@@ -8,4 +8,6 @@ order: 1
 
 # Javascript - understanding the weird Parts
 
+## Capitoli
+
 Corso che sto studiando. I capitoli sono elencati automaticamente qui sotto.

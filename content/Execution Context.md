@@ -6,4 +6,6 @@ chapter: 1
 
 # Execution Context
 
+## Appunti
+
 Appunti da completare.

@@ -73,11 +73,14 @@ plugins:
     enabled: true
     order: 30
   - source: "@quartz-community/table-of-contents"
-    enabled: false
+    enabled: true
+    options:
+      minEntries: 0
     order: 50
     layout:
-      position: right
-      priority: 30
+      position: beforeBody
+      priority: 25
+      condition: not-index
   - source: "@quartz-community/description"
     enabled: true
     order: 70

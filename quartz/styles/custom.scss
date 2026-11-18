@@ -69,25 +69,6 @@ p { margin: var(--space-4) 0; }
   margin-left: auto;
   font-family: var(--bodyFont);
 }
-.page-header > header .course-nav { position: relative; font-family: var(--bodyFont); }
-.page-header > header .course-nav > summary { cursor: pointer; color: var(--secondary); list-style: none; }
-.page-header > header .course-nav > summary::-webkit-details-marker { display: none; }
-.page-header > header .course-nav ul {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 10;
-  min-width: 260px;
-  margin: var(--space-2) 0 0;
-  padding: var(--space-2);
-  list-style: none;
-  background: var(--background);
-  border: 1px solid var(--lightgray);
-  border-radius: var(--radius-sm);
-}
-.page-header > header .course-nav li { margin: 0; }
-.page-header > header .course-nav a { display: block; padding: var(--space-1) var(--space-2); color: var(--secondary); text-decoration: none; }
-.page-header > header .course-nav a:hover { background: var(--lightgray); }
 .site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4); }
 .site-header nav { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-4); font-family: var(--bodyFont); }
 .site-title { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-weight: 450; }

@@ -9,6 +9,8 @@ aliases:
 
 # Nota di esempio
 
+## Funzionalità
+
 Questa nota mostra alcune funzionalità del tuo secondo cervello:
 
 - **Wikilink**: torna alla [[Come usare questo second brain|guida rapida]].
