@@ -1,3 +1,138 @@
-@use "./variables.scss" as *;
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --measure: 560px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+}
 
-// put your custom CSS here!
+:root, pre, pre > code {
+  scrollbar-color: var(--gray) var(--lightgray);
+  scrollbar-width: thin;
+}
+
+html { font-size: 16px; scroll-behavior: auto; }
+body { font-family: var(--bodyFont); font-size: 16px; line-height: 1.5; }
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  font-style: normal !important;
+  letter-spacing: 0 !important;
+}
+button, input, select, textarea { font: inherit; }
+p, li, ul, ol { line-height: 1.5; }
+p { margin: var(--space-4) 0; }
+
+.page {
+  box-sizing: border-box;
+  max-width: calc(var(--measure) + var(--space-8) + var(--space-8));
+  margin: 0 auto;
+  padding: 0 var(--space-8) var(--space-8);
+}
+.page > #quartz-body { display: block; padding: 0; }
+.page > #quartz-body .center {
+  width: 100%;
+  min-width: 0;
+  max-width: var(--measure);
+  margin: 0;
+}
+.page > #quartz-body > .left.sidebar,
+.page > #quartz-body > .right.sidebar { display: none; }
+.page > #quartz-body .page-header { margin: var(--space-8) 0 0; }
+.page-header > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-8);
+}
+.page-header > header .page-title {
+  margin: 0;
+  font-family: var(--headerFont);
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 450;
+}
+.page-header > header .page-title a { color: var(--dark); text-decoration: none; }
+.page-header > header .flex-component {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-4);
+}
+.page-header > header button { cursor: pointer; }
+.site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4); }
+.site-header nav { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-4); font-family: var(--bodyFont); }
+.site-title { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-weight: 450; }
+:focus-visible { outline: 1px solid var(--secondary); outline-offset: var(--space-1); }
+
+.page .article-title, h1 {
+  font-family: var(--headerFont);
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 400;
+  margin: 0 0 var(--space-4);
+}
+h2 { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-weight: 450; margin: var(--space-8) 0 var(--space-4); }
+h3, h4, h5, h6 { font-family: var(--bodyFont); font-size: 16px; line-height: 24px; font-weight: 600; margin: var(--space-6) 0 var(--space-3); }
+.date-line { display: block; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); margin-bottom: var(--space-6); }
+.post-list { list-style: none; padding: 0; margin: var(--space-8) 0 0; }
+.post-list li { display: flex; gap: var(--space-4); align-items: baseline; margin: 0 0 var(--space-3); }
+.post-list time { flex: none; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); }
+.pagination { display: flex; gap: var(--space-4); align-items: center; margin: var(--space-8) 0 0; font-family: var(--codeFont); font-size: 13px; line-height: 20px; }
+.pagination a { color: var(--secondary); }
+.pagination .pagination-disabled { color: var(--gray); opacity: 0.4; }
+.pagination span { color: var(--gray); }
+a, a:hover, a:visited { color: var(--secondary); text-decoration: underline; text-underline-offset: 3px; font-weight: 400; transition: none; }
+a.internal { background: none; border-radius: 0; padding: 0; }
+.site-title { text-decoration: none; }
+::selection { background: var(--textHighlight); color: var(--darkgray); }
+em, strong { color: var(--dark); }
+strong { font-weight: 600; }
+
+.callout {
+  --color: var(--secondary) !important;
+  --border: var(--lightgray) !important;
+  --bg: var(--highlight) !important;
+  background: var(--highlight) !important;
+  border: 0 !important;
+  border-radius: var(--radius-md);
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+}
+.callout > .callout-title { padding: 0; margin: 0 0 var(--space-2); }
+.callout-title, .callout-title p, .callout-title-inner { font-family: var(--bodyFont); font-weight: 600; color: var(--dark) !important; }
+.callout > .callout-title .callout-title-inner > p { margin: 0; }
+.callout > .callout-content { margin: 0; padding: 0; }
+.callout > .callout-content > :first-child { margin-top: 0; }
+.callout > .callout-content > :last-child { margin-bottom: 0; }
+.callout-icon { display: none; }
+
+pre, code { font-family: var(--codeFont); font-size: 13px; line-height: 20px; border-radius: 0; }
+pre { background: var(--highlight); border: 0; padding: 0; }
+pre > code { padding: var(--space-4); }
+pre code, pre code span { font: inherit; color: var(--darkgray) !important; background: none !important; }
+pre code > [data-line] { padding: 0; border: 0; }
+pre code > [data-line]::before { color: var(--gray); }
+.clipboard-button { display: none; }
+code { background: var(--highlight); }
+.table-container { overflow-x: auto; }
+.table-container > table { width: 100%; margin: var(--space-4) 0; padding: 0; border-collapse: collapse; border-radius: 0; }
+th, td { font-family: var(--codeFont); font-size: 13px; line-height: 20px; padding: var(--space-2) var(--space-3); border: 0; }
+tr, tr:last-child { border-bottom: 1px solid var(--lightgray); }
+img, video { display: block; max-width: 100%; height: auto; border: 0; border-radius: var(--radius-sm); }
+article img { width: 100%; }
+article video { width: 100%; background: var(--highlight); }
+hr { display: none; }
+section.footnotes { border-top: 1px solid var(--lightgray); margin-top: var(--space-8); padding-top: var(--space-4); }
+section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
+.page > #quartz-body .page-footer { margin-top: var(--space-8); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
