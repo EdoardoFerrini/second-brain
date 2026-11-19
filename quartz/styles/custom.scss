@@ -173,19 +173,12 @@ section.footnotes { border-top: 1px solid var(--lightgray); margin-top: var(--sp
 section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
 /* Keep wikilinks in the source so notes get backlinks, without showing them. */
 .callout[data-callout="hidden"] { display: none; }
-.note-index { margin-top: var(--space-8); }
-.note-index h3 { margin: 0 0 var(--space-4); }
-.note-count { font-family: var(--codeFont); font-size: 13px; color: var(--gray); margin-left: var(--space-2); }
-.note-list { list-style: none; padding: 0; margin: 0; }
-.note-list li {
-  display: grid;
-  grid-template-columns: 11ch minmax(0, 1fr);
-  column-gap: var(--space-4);
-  margin: 0 0 var(--space-4);
-}
-.note-list time { grid-column: 1; grid-row: 1 / span 2; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); }
-.note-list a { grid-column: 2; grid-row: 1; }
-.note-list p { grid-column: 2; grid-row: 2; margin: var(--space-1) 0 0; color: var(--darkgray); }
+.topic-index { margin-top: var(--space-8); }
+.topic-group { margin: 0 0 var(--space-6); }
+.topic-group h3 { margin: 0 0 var(--space-3); }
+.topic-count { font-family: var(--codeFont); font-size: 13px; color: var(--gray); margin-left: var(--space-2); }
+.topic-group ul { list-style: none; padding: 0; margin: 0; }
+.topic-group li { margin: 0 0 var(--space-2); }
 .graph { margin-top: var(--space-8); }
 .graph h3 { margin: 0 0 var(--space-3); }
 .graph-outer, .global-graph-outer { border: 0; background: none; padding: 0; }
