@@ -93,7 +93,15 @@ p { margin: var(--space-4) 0; }
 /* Solo testo: nessuna icona nei controlli o nell'indice. */
 .search-button svg,
 .darkmode svg,
-.toc-header .fold { display: none !important; }
+.toc-header .fold,
+.global-graph-icon,
+.global-graph-icon svg,
+h1 .internal-link,
+h2 .internal-link,
+h3 .internal-link,
+h4 .internal-link,
+h5 .internal-link,
+h6 .internal-link { display: none !important; }
 .page-header > header button.darkmode { padding: 0; background: none; border: 0; }
 .page-header > header button.darkmode::after { content: "Tema"; }
 .site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4); }
@@ -178,6 +186,9 @@ section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
 .note-list time { grid-column: 1; grid-row: 1 / span 2; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); }
 .note-list a { grid-column: 2; grid-row: 1; }
 .note-list p { grid-column: 2; grid-row: 2; margin: var(--space-1) 0 0; color: var(--darkgray); }
+.graph { margin-top: var(--space-8); }
+.graph h3 { margin: 0 0 var(--space-3); }
+.graph-outer, .global-graph-outer { border: 0; background: none; padding: 0; }
 .backlinks { margin-top: var(--space-8); }
 .page > #quartz-body .page-footer { margin-top: var(--space-8); }
 @media (prefers-reduced-motion: reduce) {
