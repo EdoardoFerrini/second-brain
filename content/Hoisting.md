@@ -1,5 +1,6 @@
 ---
 title: Hoisting
+description: Appunti da completare.
 ---
 
 # Hoisting

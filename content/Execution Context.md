@@ -1,5 +1,6 @@
 ---
 title: Execution Context
+description: Appunti da completare.
 ---
 
 # Execution Context

@@ -1,5 +1,6 @@
 ---
 title: Closures
+description: Appunti da completare.
 ---
 
 # Closures
