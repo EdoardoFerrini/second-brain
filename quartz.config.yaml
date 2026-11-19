@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+﻿# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
   pageTitle: Episteme
   pageTitleSuffix: ""
@@ -80,7 +80,7 @@ plugins:
     layout:
       position: beforeBody
       priority: 25
-      condition: not-index
+      condition: atomic
   - source: "@quartz-community/description"
     enabled: true
     order: 70
@@ -164,7 +164,7 @@ plugins:
     layout:
       position: afterBody
       priority: 20
-      condition: has-backlinks
+      condition: atomic
   - source: "@quartz-community/article-title"
     enabled: false
     layout:

@@ -1,10 +1,11 @@
-import { QuartzComponent, QuartzComponentProps } from "./types"
+﻿import { QuartzComponent, QuartzComponentProps } from "./types"
 import { QuartzPluginData } from "../plugins/vfile"
 import { resolveRelative } from "../util/path"
 
 const TOPIC_ORDER = ["programmazione", "cybersecurity", "matematica"]
 
 const titleOf = (f: QuartzPluginData) => String(f.frontmatter?.title ?? f.slug ?? "Senza titolo")
+const isMap = (f: QuartzPluginData) => f.frontmatter?.kind === "mappa"
 const orderOf = (f: QuartzPluginData) => {
   const order = f.frontmatter?.order
   return typeof order === "number" ? order : Number.POSITIVE_INFINITY
@@ -28,6 +29,7 @@ export const TopicList: QuartzComponent = ({ fileData, allFiles }: QuartzCompone
         <h3>{topic}<span class="topic-count">{groups.get(topic)!.length}</span></h3>
         <ul>
           {groups.get(topic)!
+            .filter(isMap)
             .sort((a, b) => orderOf(a) - orderOf(b) || titleOf(a).localeCompare(titleOf(b), "it"))
             .map((note) => (
               <li>

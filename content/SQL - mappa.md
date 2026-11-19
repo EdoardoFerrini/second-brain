@@ -1,7 +1,8 @@
----
+﻿---
 title: SQL - mappa
 description: Indice delle note atomiche su SQL e Sequelize.
 topic: programmazione
+kind: mappa
 order: -1
 course: full-stack-open-relational-databases
 ---

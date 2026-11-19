@@ -1,9 +1,10 @@
-import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
+﻿import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
 import { registerCondition } from "./quartz/plugins/loader/conditions"
 import { BlogLink } from "./quartz/components/BlogLink"
 import { TopicList } from "./quartz/components/TopicList"
 
 registerCondition("index", ({ fileData }) => fileData.slug === "index")
+registerCondition("atomic", ({ fileData }) => fileData.slug !== "index" && fileData.frontmatter?.kind !== "mappa")
 
 const config = await loadQuartzConfig()
 export default config
