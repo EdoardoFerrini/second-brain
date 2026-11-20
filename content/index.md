@@ -12,3 +12,6 @@ Minimal home page to preview the base theme.
 > [[Execution Context]]
 > [[Hoisting]]
 > [[Closures]]
+> [[SQL - mappa]]
+> [[Next.js - mappa]]
+> [[Cybersecurity - mappa]]
