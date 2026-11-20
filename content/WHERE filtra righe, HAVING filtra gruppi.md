@@ -1,10 +1,12 @@
----
+﻿---
 title: WHERE filtra righe, HAVING filtra gruppi
 description: WHERE agisce sulle righe prima di GROUP BY, HAVING sui gruppi dopo.
 topic: programmazione
 course: full-stack-open-relational-databases
 source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-relational-databases/chapter-1
 ---
+
+## Appunti
 
 `WHERE` scarta **righe** prima dell'aggregazione. `HAVING` scarta **gruppi** dopo `GROUP BY`.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Sequelize Model definisce una tabella
 description: Un Model Sequelize descrive la struttura di una tabella e i suoi campi.
 topic: programmazione
@@ -6,7 +6,9 @@ course: full-stack-open-relational-databases
 source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-relational-databases/chapter-2
 ---
 
-Un `Model` Sequelize è la definizione di una tabella: nome, colonne, tipi e vincoli. Le istanze del modello sono righe.
+## Appunti
+
+Un `Model` Sequelize Ã¨ la definizione di una tabella: nome, colonne, tipi e vincoli. Le istanze del modello sono righe.
 
 ```js
 class Note extends Model {}

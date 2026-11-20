@@ -1,4 +1,4 @@
----
+﻿---
 title: sync crea le tabelle, le migration le versionano
 description: sequelize.sync() crea le tabelle dai modelli; le migration registrano i cambiamenti dello schema.
 topic: programmazione
@@ -6,7 +6,9 @@ course: full-stack-open-relational-databases
 source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-relational-databases/chapter-2
 ---
 
-`sequelize.sync()` crea le tabelle a partire dai modelli. È comodo all'inizio, ma non tiene traccia dei cambiamenti.
+## Appunti
+
+`sequelize.sync()` crea le tabelle a partire dai modelli. Ãˆ comodo all'inizio, ma non tiene traccia dei cambiamenti.
 
 ```js
 await sequelize.sync({ force: true }) // cancella e ricrea le tabelle

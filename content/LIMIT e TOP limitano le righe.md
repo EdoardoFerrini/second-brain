@@ -1,10 +1,12 @@
----
+﻿---
 title: LIMIT e TOP limitano le righe
 description: PostgreSQL usa LIMIT, SQL Server usa TOP per limitare le righe restituite.
 topic: programmazione
 course: full-stack-open-relational-databases
 source: https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-relational-databases/chapter-1
 ---
+
+## Appunti
 
 Per prendere solo alcune righe la sintassi cambia da database a database.
 
@@ -20,6 +22,6 @@ SQL Server:
 SELECT TOP 10 * FROM employees;
 ```
 
-È una delle prime differenze da tenere a mente passando dal PostgreSQL del corso a SQL Server.
+Ãˆ una delle prime differenze da tenere a mente passando dal PostgreSQL del corso a SQL Server.
 
 Vedi anche [[SELECT restituisce un result set]].
