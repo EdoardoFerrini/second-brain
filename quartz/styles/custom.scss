@@ -117,6 +117,9 @@ h2 { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-we
 h3, h4, h5, h6 { font-family: var(--bodyFont); font-size: 16px; line-height: 24px; font-weight: 600; margin: var(--space-6) 0 var(--space-3); }
 /* Il plugin attiva .collapsed ma non include la regola che nasconde l'elenco. */
 .toc-content.collapsed { display: none; }
+/* Home e note-mappa non devono mostrare nemmeno il guscio vuoto del TOC. */
+body[data-slug="index"] .toc,
+body[data-kind="mappa"] .toc { display: none !important; }
 .date-line { display: block; font-family: var(--codeFont); font-size: 13px; line-height: 20px; color: var(--gray); margin-bottom: var(--space-6); }
 .post-list { list-style: none; padding: 0; margin: var(--space-8) 0 0; }
 .post-list li { display: flex; gap: var(--space-4); align-items: baseline; margin: 0 0 var(--space-3); }
