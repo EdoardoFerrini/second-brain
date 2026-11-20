@@ -90,9 +90,8 @@ p { margin: var(--space-4) 0; }
   margin-left: auto;
   font-family: var(--bodyFont);
 }
-/* Solo testo: nessuna icona nei controlli o nell'indice. */
+/* Solo testo nella search; il toggle del tema usa l'icona nativa di Quartz. */
 .search-button svg,
-.darkmode svg,
 .toc-header .fold,
 .global-graph-icon,
 .global-graph-icon svg,
@@ -102,8 +101,6 @@ h3 .internal-link,
 h4 .internal-link,
 h5 .internal-link,
 h6 .internal-link { display: none !important; }
-.page-header > header button.darkmode { padding: 0; background: none; border: 0; }
-.page-header > header button.darkmode::after { content: "Tema"; }
 .site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4); }
 .site-header nav { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-4); font-family: var(--bodyFont); }
 .site-title { font-family: var(--headerFont); font-size: 20px; line-height: 26px; font-weight: 450; }
