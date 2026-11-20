@@ -26,7 +26,7 @@ export const TopicList: QuartzComponent = ({ fileData, allFiles }: QuartzCompone
   return <section class="topic-index">
     {TOPIC_ORDER.map((topic) => (
       <section class="topic-group">
-        <h3>{topic}<span class="topic-count">{groups.get(topic)!.length}</span></h3>
+        <h3>{topic}</h3>
         <ul>
           {groups.get(topic)!
             .filter(isMap)

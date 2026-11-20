@@ -11,9 +11,9 @@
 
   --light: #fafbf8;
   --lightgray: #e3e8dc;
-  --gray: #929b86;
-  --darkgray: #4b5540;
-  --dark: #29301f;
+  --gray: #6f8a4d;
+  --darkgray: #437100;
+  --dark: #2f5c00;
   --secondary: #437100;
   --tertiary: #7d9b47;
   --highlight: rgba(67, 113, 0, 0.08);
@@ -22,9 +22,9 @@
 [saved-theme="dark"] {
   --light: #14170f;
   --lightgray: #2b3124;
-  --gray: #6b745f;
-  --darkgray: #c8d1bb;
-  --dark: #f0f4e8;
+  --gray: #8aa86a;
+  --darkgray: #a8d56b;
+  --dark: #d4eeb3;
   --secondary: #a8d56b;
   --tertiary: #7d9b47;
   --highlight: rgba(168, 213, 107, 0.12);
@@ -176,7 +176,6 @@ section.footnotes p, section.footnotes li { font-family: var(--bodyFont); }
 .topic-index { margin-top: var(--space-8); }
 .topic-group { margin: 0 0 var(--space-6); }
 .topic-group h3 { margin: 0 0 var(--space-3); }
-.topic-count { font-family: var(--codeFont); font-size: 13px; color: var(--gray); margin-left: var(--space-2); }
 .topic-group ul { list-style: none; padding: 0; margin: 0; }
 .topic-group li { margin: 0 0 var(--space-2); }
 .graph { margin-top: var(--space-8); }
