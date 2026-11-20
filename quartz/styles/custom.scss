@@ -81,7 +81,8 @@ p { margin: var(--space-4) 0; }
   color: var(--secondary);
   text-decoration: none;
 }
-.page-header > header .blog-link { font-family: var(--bodyFont); }
+.page-header > header .blog-link { font-family: var(--bodyFont); display: inline-flex; align-items: center; }
+.header-icon { display: block; width: 18px; height: 18px; }
 .page-header > header .flex-component {
   display: flex;
   align-items: center;
