@@ -9,26 +9,28 @@
   --radius-sm: 8px;
   --radius-md: 16px;
 
-  --light: #fafbf8;
-  --lightgray: #e3e8dc;
-  --gray: #929b86;
-  --darkgray: #4b5540;
-  --dark: #29301f;
+  /* Kanagawa Lotus (light) */
+  --light: #f2ecbc;
+  --lightgray: #e5ddb0;
+  --gray: #8a8980;
+  --darkgray: #545464;
+  --dark: #43436c;
   --secondary: #437100;
   --tertiary: #7d9b47;
   --highlight: rgba(67, 113, 0, 0.08);
-  --textHighlight: #dae8b8;
+  --textHighlight: #c7d7e0;
 }
 [saved-theme="dark"] {
-  --light: #14170f;
-  --lightgray: #2b3124;
-  --gray: #6b745f;
-  --darkgray: #c8d1bb;
-  --dark: #f0f4e8;
+  /* Kanagawa Wave (dark) */
+  --light: #1f1f28;
+  --lightgray: #2a2a37;
+  --gray: #727169;
+  --darkgray: #dcd7ba;
+  --dark: #c8c093;
   --secondary: #a8d56b;
   --tertiary: #7d9b47;
   --highlight: rgba(168, 213, 107, 0.12);
-  --textHighlight: #465c26;
+  --textHighlight: #2d4f67;
 }
 
 :root, pre, pre > code {
